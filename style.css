@@ -1,0 +1,80 @@
+body {
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #222;
+            color: #ddd;
+            line-height: 1.4;
+        }
+        .container {
+            text-align: left; /* Keep left align for paragraphs */
+            max-width: 700px;
+            padding: 40px;
+            background-color: #333;
+            border: 2px solid #555;
+            border-radius: 0;
+            box-shadow: 4px 4px 0 #444;
+            text-align: center; /* Center align container content for title and subtitle */
+        }
+        h2.team-letter-heading { /* Style for the "Letter from team" heading */
+            font-size: 1em; /* Slightly smaller and less prominent */
+            color: #ccc; /* Lighter grey */
+            margin-top: 5px; /* Add some top margin to separate from title */
+            margin-bottom: 20px; /* Keep bottom margin */
+            font-style: italic; /* Make it italic */
+            text-transform: none; /* Remove uppercase */
+            letter-spacing: normal; /* Reset letter spacing */
+            font-weight: normal; /* Reset font weight if needed */
+            text-align: left;
+
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0px; /* Reduce bottom margin of title */
+            color: #eee;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: left;
+        }
+        p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            text-align: left; /* Re-align paragraphs to left inside container */
+        }
+        .promise {
+            font-style: italic;
+            color: #ccc;
+            opacity: 0.7;
+        }
+        hr { /* Style for the separator */
+            border: none; /* Remove default border */
+            border-top: 1px solid #555; /* Add a subtle top border */
+            margin: 30px 0; /* Add vertical margins to separate from paragraphs */
+            opacity: 0.5; /* Make it slightly transparent to be less intrusive */
+        }
+
+        /* Media query for mobile devices (screen width less than 768px) */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+                box-shadow: 2px 2px 0 #444;
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 0px; /* Keep reduced bottom margin for h1 on mobile */
+            }
+            h2.team-letter-heading {
+                margin-bottom: 15px; /* Adjust subtitle margin on mobile */
+              
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            hr {
+                margin: 20px 0; /* Adjust hr margins on mobile */
+            }
+        }

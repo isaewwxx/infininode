@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <meta name="description"
+    content="Contact Infininode for inquiries about FinBal Pro, pricing plans, or custom solutions. Reach out to our team for support and information.">
+  <meta name="keywords"
+    content="Contact Us, Infininode, FinBal Pro, support, inquiries, financial management solutions, business finance, household finance">
+  <meta name="author" content="Infininode">
+  <title>Contact Us - Infininode</title>
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.cdnfonts.com/css/abc-ginto-nord-unlicensed-trial" rel="stylesheet">
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png"
+    href="https://cdn.glitch.global/7b4a7830-80ad-4768-8311-a7ce6c2a590f/favicon.png?v=1739307468292" />
+  <style>
+    /* Reset and Global Styles */
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "ABC Ginto Normal Unlicensed Trial", sans-serif;
+        line-height: 1.7;
+        color: #ffffff; /* Default text for dark */
+        background-color: #121212; /* Default dark background */
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        transition: background-color 0.5s ease, color 0.5s ease; /* Base transition */
+        padding-top: 90px; /* Ensure body content starts below fixed nav */
+        padding-bottom: 100px; /* Add padding for cookie banner */
+        text-align: center; /* Default text align for body */
+    }
+
+    a {
+        text-decoration: none;
+        color: #00bcd4; /* Vibrant accent color dark */
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #00f9ff; /* Lighter hover color dark */
+    }
+
+    h1, h2, h3 {
+        font-weight: 700;
+        margin-bottom: 0.8em;
+        color: #fff; /* Default dark */
+        transition: color 0.5s ease;
+        text-align: center; /* Center headings by default */
+    }
+
+    p {
+        margin-bottom: 1.2em;
+        font-weight: 300;
+        color: #ccc; /* Default dark */
+        transition: color 0.5s ease;
+        text-align: center; /* Center paragraphs by default */
+    }
+
+    /* --- Navigation --- */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.3); /* Default dark */
+        backdrop-filter: blur(10px);
+        transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+    }
+
+    .logo-container { display: flex; align-items: center; }
+    .logo { height: 50px; margin-right: 15px; transition: filter 0.5s ease; }
+    .logo-text { font-size: 28px; font-weight: 600; color: #fff; transition: color 0.5s ease; }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li { margin: 0; padding: 0; position: relative; }
+
+    /* Dot separator */
+    .nav-links li:not(:last-child):not(.theme-switch-wrapper)::after {
+        content: '•';
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #555; /* Default dark */
+        font-size: 1.2em;
+        transition: color 0.5s ease;
+    }
+    .nav-links li:nth-last-child(2)::after { content: none; }
+    .nav-links li.theme-switch-wrapper::after { content: none; }
+
+    .nav-links a {
+        color: #eee; /* Default dark */
+        font-size: 18px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.5s ease;
+        white-space: nowrap;
+        position: relative; /* For ::after animation */
+        display: flex; /* Align icon properly */
+        align-items: center; /* Align icon properly */
+    }
+    /* Nav link hover animation */
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%; height: 2px;
+        background-color: #00bcd4; /* Default dark */
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease, background-color 0.5s ease; /* Add bg transition */
+    }
+    .nav-links a:hover { background-color: rgba(255, 255, 255, 0.1); /* Default dark */ }
+    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links a.current { color: #00bcd4; font-weight: 500; }
+    .nav-links a.current::after { transform: scaleX(1); background-color: #00bcd4; } /* Default dark */
+
+    /* --- Hamburger Menu - Morphing Animation (Consistent Style) --- */
+    .hamburger {
+        display: none; /* Hidden by default, shown in media query */
+        padding: 10px; /* Adjust padding if needed */
+        width: 40px; /* Or adjust as needed */
+        height: 40px; /* Or adjust as needed */
+        cursor: pointer;
+        transition: opacity 0.15s linear, filter 0.15s linear, background 0.5s ease, color 0.5s ease; /* Add theme transitions */
+        font: inherit;
+        color: #00bcd4; /* Default DARK mode bar color */
+        text-transform: none;
+        background-color: transparent; /* Make background transparent */
+        border: 0;
+        margin: 0;
+        overflow: visible;
+        position: relative; /* Needed for absolute positioning */
+        z-index: 1001; /* Ensure it's above nav */
+        outline: none; /* Remove default outline */
+        margin-left: 10px; /* Space from nav items */
+    }
+    /* Light theme bar color */
+    body.light-theme .hamburger {
+        color: #007bff;
+    }
+
+     /* Optional: Re-add button background/shadow if desired, separate from bars */
+     .hamburger::before { /* Optional background/neumorphism */
+         content: '';
+         position: absolute;
+         top: 0; left: 0;
+         width: 100%; height: 100%;
+         border-radius: 50%;
+         background: linear-gradient(145deg, #1a1a1a, #222222); /* Dark mode bg */
+         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.05);
+         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+         z-index: -1; /* Place behind the bars */
+     }
+     body.light-theme .hamburger::before {
+          background: linear-gradient(145deg, #eef2f5, #ffffff);
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08), -4px -4px 8px rgba(255, 255, 255, 0.9);
+     }
+     .hamburger:hover::before {
+         transform: scale(1.05);
+         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.06); /* Dark */
+     }
+     body.light-theme .hamburger:hover::before {
+         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 1); /* Light */
+     }
+
+     .hamburger.active::before { /* Active state background */
+        background: linear-gradient(145deg, #222222, #1a1a1a); /* Dark mode active */
+        box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25), inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+     }
+     body.light-theme .hamburger.active::before {
+        background: linear-gradient(145deg, #ffffff, #eef2f5); /* Light mode active */
+        box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 1);
+     }
+     /* Active icon color change (applies to bars via currentColor) */
+     .hamburger.active {
+         color: #00f9ff; /* Active icon color dark mode */
+     }
+     body.light-theme .hamburger.active {
+         color: #0056b3; /* Light mode active icon color */
+     }
+
+
+    .hamburger-box {
+        width: 24px; /* Width of the icon area */
+        height: 18px; /* Height of the icon area (3 bars + 2 gaps) */
+        display: inline-block;
+        position: absolute; /* Use absolute positioning */
+        /* Vertical and horizontal centering */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: -1px; /* Half the bar height */
+        position: relative; /* Needed for ::before/::after positioning */
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        width: 100%; /* Bar width (takes width from .hamburger-box) */
+        height: 2px; /* Bar height */
+        background-color: currentColor; /* Use the button's color */
+        border-radius: 4px;
+        position: absolute;
+        transition-property: transform, background-color; /* Include bg color transition for theme switch */
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+    }
+    /* Theme transition for background-color specifically */
+     .hamburger-inner,
+     .hamburger-inner::before,
+     .hamburger-inner::after {
+         transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
+                     background-color 0.5s ease, /* Theme transition for bar color */
+                     top 0.1s 0.25s ease-in,      /* Transition for top bar position */
+                     bottom 0.1s 0.25s ease-in,    /* Transition for bottom bar position */
+                     opacity 0.1s ease-in;        /* Transition for top bar opacity */
+     }
+
+
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        content: "";
+        display: block;
+        left: 0; /* Ensure bars start at the left edge */
+    }
+
+    .hamburger-inner::before {
+        top: -8px; /* Position top bar (adjust spacing) */
+        /* Separate transition for active state */
+         transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0.5s ease;
+    }
+
+    .hamburger-inner::after {
+        bottom: -8px; /* Position bottom bar (adjust spacing) */
+        /* Separate transition for active state */
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0.5s ease;
+    }
+
+    /* Active State (X Formation) */
+    .hamburger.active .hamburger-inner {
+        transform: rotate(225deg); /* Rotate middle bar */
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    .hamburger.active .hamburger-inner::before {
+        top: 0; /* Move top bar to center */
+        opacity: 0; /* Hide top bar */
+        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; /* Timing for active state */
+    }
+
+    .hamburger.active .hamburger-inner::after {
+        bottom: 0; /* Move bottom bar to center */
+        transform: rotate(-90deg); /* Rotate bottom bar to form the other X stroke */
+        transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); /* Timing for active state */
+    }
+    /* --- End Hamburger Menu CSS --- */
+
+    /* --- Theme Toggle Styles --- */
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        margin-left: 10px; /* Space from last nav link */
+    }
+    #theme-toggle {
+        background: none; border: none;
+        padding: 0; width: 40px; height: 40px;
+        cursor: pointer; color: #eee; /* Dark mode icon */
+        display: inline-flex; align-items: center; justify-content: center;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative; overflow: hidden;
+        background: linear-gradient(145deg, #1a1a1a, #222222); /* Dark mode bg */
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.05);
+        outline: none;
+    }
+    body.light-theme #theme-toggle {
+        color: #007bff; /* Light mode icon */
+        background: linear-gradient(145deg, #eef2f5, #ffffff); /* Light mode bg */
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05), -4px -4px 8px rgba(255, 255, 255, 0.9);
+    }
+    #theme-toggle:hover { transform: scale(1.05); box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.06); /* Dark */ }
+    body.light-theme #theme-toggle:hover { box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08), -5px -5px 10px rgba(255, 255, 255, 1); /* Light */ }
+
+    .theme-icon { width: 18px; height: 18px; stroke-width: 2; position: absolute; top: 50%; left: 50%; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; }
+    .theme-icon.icon-moon { opacity: 1; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    .theme-icon.icon-sun { opacity: 0; transform: translate(-50%, -50%) rotate(90deg) scale(0.5); }
+    body.light-theme .theme-icon.icon-moon { opacity: 0; transform: translate(-50%, -50%) rotate(-90deg) scale(0.5); }
+    body.light-theme .theme-icon.icon-sun { opacity: 1; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+
+    /* Mobile Menu Styles */
+    @media (max-width: 768px) {
+        .hamburger { display: inline-flex; } /* Show consistent hamburger */
+        .nav-links {
+            display: block; position: fixed; /* Use fixed to stay in view */
+            top: 80px; right: 30px;
+            width: 180px; background: rgba(18, 18, 18, 0.95); /* Dark mode background */
+            padding: 10px 0; border-radius: 12px;
+            z-index: 1000; overflow: hidden;
+            transition: all 0.3s ease, background-color 0.5s ease; /* Add bg transition */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            opacity: 0; visibility: hidden;
+            transform: translateY(-10px);
+        }
+        .nav-links.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-links li {
+            opacity: 0; transform: translateY(10px);
+            transition: all 0.3s ease; transition-delay: calc(0.05s * var(--i, 0));
+            margin: 0; padding: 0; width: 100%;
+        }
+        .nav-links.active li { opacity: 1; transform: translateY(0); }
+        .nav-links a {
+            display: flex; align-items: center; justify-content: center;
+            padding: 12px 15px; color: #ffffff; /* Dark mode mobile text */
+            font-size: 15px; transition: all 0.3s ease;
+            position: relative; overflow: hidden;
+            width: 100%; text-decoration: none; font-weight: 500;
+        }
+        .nav-links a::before { /* Mobile underline */
+            content: ''; position: absolute; bottom: 0; left: 50%;
+            width: 0; height: 2px; background: #00bcd4; /* Dark mode mobile underline */
+            transform: translateX(-50%); transition: width 0.3s ease, background-color 0.5s ease; /* Add bg transition */
+        }
+        .nav-links a:hover { color: #00f9ff; /* Dark mode mobile hover */ background-color: transparent; }
+        .nav-links a:hover::before { width: 30px; }
+        .nav-links a.current { color: #00f9ff; } /* Dark mode mobile current */
+        .nav-links a.current::before { width: 30px; background: #00f9ff; } /* Dark mode mobile current */
+        .nav-links a::after { display: none; } /* Hide desktop underline */
+        .nav-links li::after { display: none !important; } /* Hide dots */
+
+        /* Theme toggle mobile */
+        .nav-links li.theme-switch-wrapper {
+             margin-left: 0; display: flex; justify-content: center;
+             padding: 5px 0;
+             opacity: 0; transform: translateY(10px);
+             transition: all 0.3s ease; transition-delay: calc(0.05s * var(--theme-i, 5));
+        }
+        .nav-links.active li.theme-switch-wrapper { opacity: 1; transform: translateY(0); }
+        .nav-links li.theme-switch-wrapper #theme-toggle {
+             width: auto; height: auto;
+             padding: 12px 15px; background: transparent;
+             box-shadow: none; border-radius: 5px;
+             color: #ffffff; /* Dark mode mobile icon */
+             overflow: visible;
+        }
+        .nav-links li.theme-switch-wrapper #theme-toggle:hover { background-color: rgba(255, 255, 255, 0.1); transform: none; }
+        body.light-theme .nav-links li.theme-switch-wrapper #theme-toggle { color: #333; /* Light mode mobile icon */ }
+        body.light-theme .nav-links li.theme-switch-wrapper #theme-toggle:hover { background-color: rgba(0, 0, 0, 0.05); }
+
+        .menu-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .menu-backdrop.active { opacity: 1; visibility: visible; }
+    }
+
+    /* --- Hero Section --- */
+    .hero-container {
+        position: relative;
+        padding: 60px 30px 30px; /* Adjusted padding */
+        text-align: center;
+        overflow: hidden;
+        transition: background 0.5s ease; /* Transition background */
+        background: linear-gradient(to bottom, rgba(18, 18, 18, 0.1), rgba(18, 18, 18, 0.5)); /* Subtle gradient dark */
+    }
+    .hero-container h1 {
+        font-size: 3.5rem; /* Adjusted size */
+        margin-bottom: 15px; /* Reduced margin */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for depth */
+        transition: color 0.5s ease, text-shadow 0.5s ease; /* Transition for dark mode */
+        color: #fff; /* Hero text color */
+    }
+    .hero-container p {
+        font-size: 1.3rem; /* Adjusted size */
+        color: #ddd;
+        margin-bottom: 0; /* Removed bottom margin */
+        transition: color 0.5s ease; /* Transition for dark mode */
+    }
+
+    /* --- Content Section (Contact Specific) --- */
+    .contact-us-container {
+        max-width: 1200px;
+        margin: 50px auto; /* Center the container with margin */
+        padding: 40px 30px;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, #1a1a1a, #222); /* Darker gradient dark */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Dark */
+        transition: background 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .contact-us-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #fff; /* Dark */
+        transition: color 0.5s ease;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 30px;
+        align-items: start;
+    }
+
+    .contact-details {
+        padding: 30px;
+        border-radius: 8px;
+        background-color: #1e1e1e; /* Dark */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Dark */
+        transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .contact-details h3 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #fff; /* Dark */
+        text-align: left;
+        transition: color 0.5s ease;
+    }
+
+    .contact-details p {
+        font-size: 1.1rem;
+        color: #bbb; /* Dark */
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        transition: color 0.5s ease;
+    }
+
+    .contact-details p i { /* Style Feather icons */
+        margin-right: 10px;
+        width: 24px; height: 24px; /* Adjust size as needed */
+        color: #00bcd4; /* Dark */
+        stroke-width: 2;
+        flex-shrink: 0;
+        transition: color 0.5s ease;
+    }
+
+    .contact-details a {
+        color: #00bcd4; /* Dark */
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+    .contact-details a:hover {
+        color: #00f9ff; /* Dark */
+    }
+
+    .contact-map {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Dark */
+         transition: box-shadow 0.5s ease;
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 350px;
+        display: block;
+        border: 0;
+    }
+
+    /* Social Buttons (Side-by-Side on Desktop) */
+    .social-buttons-contact {
+        margin-top: 30px;
+        text-align: left;
+        display: flex; /* Use flexbox for side-by-side */
+        align-items: center;
+        justify-content: flex-start; /* Align to start */
+        gap: 20px; /* Gap between buttons */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .social-buttons-contact p { /* Remove extra p tag styles if not needed */
+        margin: 0;
+    }
+
+    .social-buttons-contact a { /* Style individual social buttons */
+        display: inline-flex;
+        align-items: center;
+        background-color: #00bcd4; /* Dark */
+        color: #121212; /* Dark */
+        padding: 10px 20px; /* Adjusted padding */
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 1rem; /* Adjusted font size */
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.5s ease;
+        box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3); /* Dark */
+        text-decoration: none;
+        gap: 8px;
+    }
+
+    .social-buttons-contact a:hover {
+        background-color: #00f9ff; /* Dark */
+        color: #000; /* Dark */
+        box-shadow: 0 6px 15px rgba(0, 188, 212, 0.5); /* Dark */
+        transform: scale(1.05); /* Add slight scale */
+    }
+
+    .social-buttons-contact a i {
+        width: 18px; height: 18px; /* Adjust icon size */
+        stroke-width: 2;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 960px) { /* Tablet and below */
+        .contact-wrapper {
+            grid-template-columns: 1fr; /* Stack columns */
+        }
+    }
+    @media (max-width: 768px) { /* Mobile */
+         body { padding-top: 70px; } /* Further adjust */
+         .hero-container h1 { font-size: 2.5rem; }
+         .hero-container p { font-size: 1.1rem; }
+         .contact-us-container h2 { font-size: 2rem;}
+         .contact-details h3 { font-size: 1.8rem; }
+         .social-buttons-contact {
+             justify-content: center; /* Center buttons on mobile */
+             flex-direction: column; /* Stack buttons vertically on small mobile */
+             align-items: stretch; /* Make buttons take full width */
+             gap: 15px;
+         }
+         .social-buttons-contact a {
+             justify-content: center; /* Center text/icon inside button */
+             width: 100%;
+             max-width: 300px; /* Optional: limit max width */
+             margin: 0 auto; /* Center button block */
+         }
+    }
+
+    /* --- Footer --- */
+    footer { padding: 50px 30px 0; background-color: #000; /* Dark */ color: #777; /* Dark */ font-size: 0.9rem; transition: background-color 0.5s ease, color 0.5s ease; margin-top: auto; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 50px; padding-bottom: 40px; text-align: left; }
+    .footer-brand .footer-logo { height: 40px; margin-bottom: 10px; display: block; }
+    .footer-brand .footer-logo-text { font-size: 20px; font-weight: 600; color: #fff; display: block; margin-bottom: 5px; transition: color 0.5s ease;}
+    .footer-brand .footer-tagline { font-size: 0.85rem; color: #aaa; margin-bottom: 0; transition: color 0.5s ease;}
+    .footer-nav ul { list-style: none; padding: 0; }
+    .footer-nav li { margin-bottom: 12px; }
+    .footer-nav a, .footer-social a { color: #00bcd4; /* Dark */ transition: color 0.3s ease, transform 0.3s ease; text-decoration: none; display: inline-block; }
+    .footer-nav a:hover { color: #00f9ff; text-decoration: underline; }
+    .footer-social a:hover { color: #00f9ff; transform: scale(1.1); }
+    .footer-social a { margin-right: 18px; display: inline-block; }
+    .footer-social i { width: 28px; height: 28px; stroke-width: 1.5; display: block; }
+    .footer-disclaimer p { font-size: 0.8rem; color: #aaa; margin-bottom: 0; line-height: 1.6; transition: color 0.5s ease;}
+    .footer-disclaimer strong { color: #ccc; font-weight: 500; transition: color 0.5s ease;} /* Dark */
+    footer h4 { color: #eee; /* Dark */ margin-bottom: 20px; font-size: 1.1rem; font-weight: 600; transition: color 0.5s ease;}
+    .footer-bottom { text-align: center; padding: 20px 30px; margin-top: 0; border-top: 1px solid #333; /* Dark */ font-size: 0.85rem; color: #999; /* Dark */ transition: border-color 0.5s ease, color 0.5s ease; }
+    .footer-bottom p { margin-bottom: 0; }
+    @media (max-width: 768px) {
+        .footer-container { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+        .footer-brand, .footer-nav, .footer-social, .footer-disclaimer { text-align: center; }
+         .footer-brand .footer-logo, .footer-brand .footer-logo-text { display: inline-block; vertical-align: middle; margin-bottom: 15px; }
+         .footer-brand .footer-logo { margin-right: 10px; }
+         .footer-brand .footer-tagline { margin-bottom: 10px; }
+        .footer-social a { margin: 0 10px; }
+    }
+
+    /* Loading State */
+    .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(18, 18, 18, 0.9); /* Dark */ display: flex; justify-content: center; align-items: center; z-index: 9999; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.5s ease; }
+    .loading-overlay.active { opacity: 1; visibility: visible; }
+    .loading-spinner { width: 50px; height: 50px; border: 3px solid rgba(0, 188, 212, 0.3); /* Dark */ border-radius: 50%; border-top-color: #00bcd4; /* Dark */ animation: spin 1s ease-in-out infinite; transition: border-color 0.5s ease; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Scroll Progress Indicator */
+    .scroll-progress { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background-color: rgba(0, 188, 212, 0.2); /* Dark */ z-index: 1000; transition: background-color 0.5s ease; }
+    .scroll-progress-bar { height: 100%; background-color: #00bcd4; /* Dark */ width: 0%; transition: width 0.1s ease, background-color 0.5s ease; }
+
+    /* Back to Top Button */
+    .back-to-top { position: fixed; bottom: 20px; right: 20px; width: 40px; height: 40px; background-color: #00bcd4; /* Dark */ color: #121212; /* Dark */ border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease, background-color 0.5s ease, color 0.5s ease, bottom 0.4s ease; /* Added bottom transition */ z-index: 100; }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4); /* Dark */ }
+    .back-to-top svg { stroke: currentColor; }
+
+    /* Icon Styles */
+    .icon-inline { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; stroke-width: 2; flex-shrink: 0; }
+    .icon-button { width: 20px; height: 20px; stroke-width: 2; flex-shrink: 0; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+
+
+    /* --- Light Theme Styles --- */
+    body.light-theme { background-color: #f4f7f9; color: #333; }
+    body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme .logo-text, body.light-theme .contact-details h3, body.light-theme .footer-logo-text, body.light-theme footer h4 { color: #111; }
+    body.light-theme p, body.light-theme .contact-details p, body.light-theme .footer-brand .footer-tagline, body.light-theme .footer-disclaimer p { color: #555; }
+    body.light-theme a { color: #007bff; } /* Primary accent light */
+    body.light-theme a:hover { color: #0056b3; } /* Darker accent light */
+    body.light-theme nav { background: rgba(255, 255, 255, 0.85); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    body.light-theme .logo { filter: none; }
+    body.light-theme .nav-links a, body.light-theme #theme-toggle { color: #333; }
+    body.light-theme .nav-links li:not(:last-child):not(.theme-switch-wrapper)::after { color: #bbb; }
+    body.light-theme .nav-links a:hover, body.light-theme #theme-toggle:hover { background-color: rgba(0, 0, 0, 0.05); }
+    body.light-theme .nav-links a::after { background-color: #007bff; }
+    body.light-theme .nav-links a.current { color: #007bff; }
+    body.light-theme .nav-links a.current::after { background-color: #007bff; }
+    /* Hamburger handled by consistent styles */
+    /* Theme Toggle handled by consistent styles */
+    /* Mobile Menu handled by consistent styles */
+    @media (max-width: 768px) {
+      body.light-theme .nav-links { background: rgba(244, 247, 249, 0.98); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05); }
+      body.light-theme .nav-links a { color: #333; }
+      body.light-theme .nav-links a:hover { color: #0056b3; }
+      body.light-theme .nav-links a::before { background: #007bff; }
+      body.light-theme .nav-links a.current { color: #007bff; }
+      body.light-theme .nav-links a.current::before { background: #007bff; }
+      body.light-theme .nav-links li.theme-switch-wrapper #theme-toggle { color: #333; }
+      body.light-theme .nav-links li.theme-switch-wrapper #theme-toggle:hover { background-color: rgba(0, 0, 0, 0.05); }
+    }
+    body.light-theme .hero-container { background: linear-gradient(to bottom, rgba(244, 247, 249, 0.1), rgba(233, 237, 241, 0.3)); } /* Light gradient */
+    body.light-theme .hero-container h1 { text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+    body.light-theme .cta-button { background-color: #007bff; color: #fff; box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); }
+    body.light-theme .cta-button:hover { background-color: #0056b3; color: #fff; }
+    body.light-theme .contact-us-container { background: linear-gradient(to bottom, #f0f4f8, #e9edf1); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+    body.light-theme .contact-details { background-color: #ffffff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); }
+    body.light-theme .contact-details p i { color: #007bff; }
+    body.light-theme .contact-details a { color: #007bff; }
+    body.light-theme .contact-details a:hover { color: #0056b3; }
+    body.light-theme .contact-map { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+    body.light-theme .social-buttons-contact a { background-color: #007bff; color: #fff; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); }
+    body.light-theme .social-buttons-contact a:hover { background-color: #0056b3; box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); }
+    body.light-theme footer { background-color: #e2e6ea; color: #555; }
+    body.light-theme .footer-nav a, body.light-theme .footer-social a { color: #007bff; }
+    body.light-theme .footer-nav a:hover, body.light-theme .footer-social a:hover { color: #0056b3; }
+    body.light-theme .footer-disclaimer strong { color: #444; }
+    body.light-theme .footer-bottom { border-top: 1px solid #ced4da; color: #6c757d; }
+    body.light-theme .loading-overlay { background-color: rgba(244, 247, 249, 0.95); }
+    body.light-theme .loading-spinner { border: 3px solid rgba(0, 123, 255, 0.2); border-top-color: #007bff; }
+    body.light-theme .scroll-progress { background-color: rgba(0, 123, 255, 0.2); }
+    body.light-theme .scroll-progress-bar { background-color: #007bff; }
+    body.light-theme .back-to-top { background-color: #007bff; color: #fff; }
+    body.light-theme .back-to-top:hover { box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); }
+
+    /* --- Cookie Consent Banner --- */
+    #cookieConsentBanner { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #1e1e1e; /* Dark */ color: #ccc; /* Dark */ padding: 15px 30px; z-index: 1050; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); transition: background-color 0.5s ease, color 0.5s ease, transform 0.4s ease, opacity 0.4s ease; transform: translateY(100%); opacity: 0; visibility: hidden; }
+    #cookieConsentBanner.active { transform: translateY(0); opacity: 1; visibility: visible; }
+    #cookieConsentBanner p { margin: 0; font-size: 0.9rem; flex-grow: 1; text-align: left; /* Override center */ }
+    #cookieConsentBanner a { color: #00bcd4; /* Dark */ text-decoration: underline; }
+    #cookieConsentBanner a:hover { color: #00f9ff; }
+    #cookieAcceptButton { padding: 8px 20px; font-size: 0.9rem; border-radius: 20px; flex-shrink: 0; /* Inherits .cta-button */ background-color: #00bcd4; color: #121212; box-shadow: 0 3px 10px rgba(0, 188, 212, 0.3); border: none; cursor: pointer; }
+    #cookieAcceptButton:hover { background-color: #00f9ff; color: #000; transform: scale(1.05); }
+
+    /* Cookie Consent Light Theme */
+    body.light-theme #cookieConsentBanner { background-color: #ffffff; color: #555; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); }
+    body.light-theme #cookieConsentBanner a { color: #007bff; /* Light */ }
+    body.light-theme #cookieConsentBanner a:hover { color: #0056b3; }
+    body.light-theme #cookieAcceptButton { background-color: #007bff; color: #fff; box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3); }
+    body.light-theme #cookieAcceptButton:hover { background-color: #0056b3; color: #fff; transform: scale(1.05); }
+
+  </style>
+  <!-- FOUC Prevention Script -->
+  <script>
+      (function() {
+          const savedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          let theme = 'dark'; // Default
+          if (savedTheme) {
+              theme = savedTheme;
+          } else if (!prefersDark) {
+              // theme = 'light'; // Uncomment to default light based on OS pref
+          }
+          if (theme === 'light') {
+              document.documentElement.classList.add('light-theme-loading');
+          }
+      })();
+  </script>
+  <!-- Minimal CSS for FOUC Prevention -->
+  <style>
+      html.light-theme-loading body { background-color: #f4f7f9; color: #333; }
+      html.light-theme-loading nav { background: rgba(255, 255, 255, 0.85); }
+      /* Prevent flash of unstyled hamburger/theme buttons */
+      html .hamburger, html #theme-toggle { opacity: 0; }
+      html body .hamburger, html body #theme-toggle { opacity: 1; transition: opacity 0.3s ease; } /* Fade in when body loads */
+      /* Hide cookie banner initially to prevent flash */
+      #cookieConsentBanner { visibility: hidden; }
+  </style>
+</head>
+
+<body >
+  <div class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
+  <a href="#" class="back-to-top" aria-label="Back to top"> <!-- Use <a> tag -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </a>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo-container">
+      <img src="https://cdn.glitch.global/7b4a7830-80ad-4768-8311-a7ce6c2a590f/logo.png?v=1739302508542"
+        alt="Infininode Logo" class="logo" />
+      <span class="logo-text">Infininode</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i data-feather="home" class="icon-inline"></i>Home</a></li>
+      <li><a href="about-us.html"><i data-feather="info" class="icon-inline"></i>About Us</a></li>
+      <li><a href="finbalpro.html"><i data-feather="box" class="icon-inline"></i>FinBal Pro</a></li>
+      <li><a href="pricing.html"><i data-feather="tag" class="icon-inline"></i>Pricing</a></li>
+      <li><a href="contact-us.html" class="current"><i data-feather="mail" class="icon-inline"></i>Contact Us</a></li>
+       <!-- Theme Toggle Button -->
+       <li class="theme-switch-wrapper">
+          <button id="theme-toggle" aria-label="Toggle theme">
+               <!-- Icons for theme toggle -->
+              <i data-feather="moon" class="theme-icon icon-moon"></i>
+              <i data-feather="sun" class="theme-icon icon-sun"></i>
+          </button>
+      </li>
+    </ul>
+    <!-- Hamburger icon (Consistent Style) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-container"> <!-- Use header tag -->
+    <h1>Get in Touch</h1>
+    <p>We're here to help. Contact us for more information or support.</p>
+  </header>
+
+  <main> <!-- Wrap main content -->
+      <!-- Contact Us Content Section -->
+      <section class="content-section contact-us-container">
+        <h2> Contact Information</h2>
+        <div class="contact-wrapper">
+          <div class="contact-details">
+            <h3> Reach Out to Us</h3>
+            <p>
+              <i data-feather="mail" class="icon-inline"></i> <!-- Changed to Feather Icon -->
+              <a href="mailto:infininode.nfsg@gmail.com">infininode.nfsg@gmail.com</a>
+            </p>
+            <p>
+              <i data-feather="phone" class="icon-inline"></i> <!-- Changed to Feather Icon -->
+              +359 123 456 789
+            </p>
+            <p>
+              <i data-feather="map-pin" class="icon-inline"></i> <!-- Changed to Feather Icon -->
+              1 Rozova dolina Str., Sofia, 1421, Bulgaria
+            </p>
+            <div class="social-buttons-contact">
+                <a href="https://www.instagram.com/infininode/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <i data-feather="instagram"></i> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@infininode" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                  <i data-feather="video"></i> TikTok
+                </a>
+            </div>
+          </div>
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1466.4857743291143!2d23.326072!3d42.683145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa925f4a5afe07%3A0xd6e7a4d0a1d971a0!2sNational%20High%20School%20in%20Finance%20and%20Business!5e0!3m2!1sen!2sbg!4v1739279362663!5m2!1sen!2sbg"
+              width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="https://cdn.glitch.global/7b4a7830-80ad-4768-8311-a7ce6c2a590f/logo.png?v=1739302508542" alt="Infininode Logo" class="footer-logo" />
+        <span class="footer-logo-text">Infininode</span>
+        <p class="footer-tagline">Intelligent Finance Simplified.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="finbalpro.html">FinBal Pro</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://www.instagram.com/infininode/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-feather="instagram"></i></a>
+        <a href="https://www.tiktok.com/@infininode" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i data-feather="video"></i></a>
+      </div>
+       <div class="footer-disclaimer">
+          <h4>Disclaimer</h4>
+          <p>Infininode is a fictional training enterprise by <strong>National High School in Finance and Business</strong>, Sofia. Brands used under educational fair use. Not a commercial entity.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Infininode PE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsentBanner">
+      <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <!-- You might want a link here: <a href="/privacy-policy.html">Learn more</a> --></p>
+      <button id="cookieAcceptButton" class="cta-button">Accept</button>
+  </div>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <!-- Combined and Updated JavaScript -->
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          // --- Basic Setup & Utils ---
+          const loadingOverlay = document.querySelector('.loading-overlay');
+          const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+          const backToTopButton = document.querySelector('.back-to-top');
+          const hamburger = document.getElementById('hamburger');
+          const navLinks = document.getElementById('navLinks');
+          const menuBackdrop = document.getElementById('menuBackdrop');
+          const body = document.body;
+          const themeToggleButton = document.getElementById('theme-toggle'); // Added
+          const cookieConsentBanner = document.getElementById('cookieConsentBanner'); // Added
+          const cookieAcceptButton = document.getElementById('cookieAcceptButton'); // Added
+
+          function showLoading() { if (loadingOverlay) loadingOverlay.classList.add('active'); }
+          function hideLoading() { if (loadingOverlay) loadingOverlay.classList.remove('active'); }
+
+          // --- FOUC Prevention Cleanup ---
+          if (document.documentElement.classList.contains('light-theme-loading')) {
+              body.classList.add('light-theme'); // Apply the actual theme class
+              document.documentElement.classList.remove('light-theme-loading'); // Remove temp class
+          }
+
+          // --- Theme Toggle Logic (Added) ---
+          const applyTheme = (theme) => {
+              if (theme === 'light') {
+                  body.classList.add('light-theme');
+                  // CSS handles icon visibility/animation based on body class
+                  if (themeToggleButton) themeToggleButton.setAttribute('aria-label', 'Switch to dark theme');
+              } else {
+                  body.classList.remove('light-theme');
+                  // CSS handles icon visibility/animation based on body class
+                  if (themeToggleButton) themeToggleButton.setAttribute('aria-label', 'Switch to light theme');
+              }
+              // Ensure Feather Icons re-renders AFTER body class might have changed.
+              feather.replace();
+          };
+
+          // Determine initial theme (from localStorage or body class set by FOUC script)
+          let currentTheme = body.classList.contains('light-theme') ? 'light' : 'dark';
+
+          // Apply theme (sets body class, aria-label, and calls feather.replace)
+          applyTheme(currentTheme);
+
+          // Add event listener for the toggle button
+          if (themeToggleButton) {
+              themeToggleButton.addEventListener('click', () => {
+                  currentTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+                  applyTheme(currentTheme);
+                  localStorage.setItem('theme', currentTheme);
+              });
+          }
+
+          // --- Navigation & Menu (Consistent Style) ---
+          // Set staggered animation index for nav items
+          const menuItems = navLinks ? navLinks.querySelectorAll('li:not(.theme-switch-wrapper)') : [];
+          menuItems.forEach((item, index) => { item.style.setProperty('--i', index); });
+           // Assign index to theme toggle specifically for mobile animation
+           const themeToggleLi = navLinks ? navLinks.querySelector('li.theme-switch-wrapper') : null;
+           if (themeToggleLi) { themeToggleLi.style.setProperty('--theme-i', menuItems.length); }
+
+          function openMenu() { /* ... (same as previous page) ... */
+              if (!navLinks || !hamburger || !menuBackdrop) return;
+              navLinks.classList.add('active');
+              hamburger.classList.add('active');
+              menuBackdrop.classList.add('active');
+              body.style.overflow = 'hidden';
+          }
+          function closeMenu() { /* ... (same as previous page) ... */
+               if (!navLinks || !hamburger || !menuBackdrop) return;
+              navLinks.classList.remove('active');
+              hamburger.classList.remove('active');
+              menuBackdrop.classList.remove('active');
+              body.style.overflow = '';
+          }
+
+          if (hamburger && navLinks) {
+              hamburger.addEventListener('click', (e) => { e.stopPropagation(); navLinks.classList.contains('active') ? closeMenu() : openMenu(); });
+              navLinks.querySelectorAll('a, button').forEach(link => { // Include theme button
+                  link.addEventListener('click', (e) => { if (e.currentTarget.id !== 'theme-toggle') { closeMenu(); } });
+              });
+              menuBackdrop.addEventListener('click', closeMenu);
+              document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && navLinks.classList.contains('active')) { closeMenu(); } });
+          }
+
+          // Add active class to current page link
+          try {
+              const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+              const targetPageName = 'contact-us.html'; // Explicitly define the target page name
+              document.querySelectorAll('.nav-links a').forEach(link => {
+                  const linkHref = link.getAttribute('href');
+                  if (linkHref) {
+                       const linkPath = linkHref.split('/').pop();
+                       // Check if the link's path matches the target page name
+                       if (linkPath === targetPageName) {
+                           link.classList.add('current');
+                       } else {
+                           link.classList.remove('current');
+                       }
+                  }
+              });
+           } catch (error) { console.error("Error setting active link:", error); }
+
+
+          // --- Scroll Features ---
+          window.addEventListener('scroll', () => {
+              if (scrollProgressBar) { /* ... (same as previous page) ... */
+                  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                  const scrollableHeight = windowHeight > 0 ? windowHeight : 1;
+                  const scrolled = (window.scrollY / scrollableHeight) * 100;
+                  scrollProgressBar.style.width = `${scrolled}%`;
+              }
+              if (backToTopButton) { /* ... (Adjusted check) ... */
+                  const threshold = cookieConsentBanner && cookieConsentBanner.classList.contains('active') ? 300 + cookieConsentBanner.offsetHeight : 300;
+                  if (window.scrollY > threshold) { backToTopButton.classList.add('visible'); }
+                  else { backToTopButton.classList.remove('visible'); }
+              }
+          }, { passive: true });
+
+          if (backToTopButton) {
+              backToTopButton.addEventListener('click', (e) => { /* ... (same as previous page) ... */
+                  e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });
+              });
+          }
+
+           // Smooth scroll for internal anchor links (if any added later)
+           document.querySelectorAll('a[href^="#"]').forEach(anchor => { /* ... (same as previous page) ... */
+              if (anchor !== backToTopButton) { // Exclude back-to-top button
+                  anchor.addEventListener('click', function (e) {
+                      const href = this.getAttribute('href');
+                      if (href.length > 1) { // Ensure it's not just "#"
+                           try {
+                              const targetElement = document.querySelector(href);
+                              if (targetElement) {
+                                  e.preventDefault();
+                                  targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                   if (navLinks && navLinks.classList.contains('active')) { closeMenu(); } // Close menu if open
+                              }
+                           } catch (error) { console.error("Error scrolling to anchor:", error); }
+                      }
+                  });
+              }
+          });
+
+          // --- Cookie Consent Logic (Added) ---
+          function setCookie(name, value, days) { /* ... (same as previous page) ... */
+              let expires = "";
+              if (days) {
+                  const date = new Date();
+                  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                  expires = "; expires=" + date.toUTCString();
+              }
+              document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+          }
+
+          function getCookie(name) { /* ... (same as previous page) ... */
+              const nameEQ = name + "=";
+              const ca = document.cookie.split(';');
+              for (let i = 0; i < ca.length; i++) {
+                  let c = ca[i];
+                  while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+              }
+              return null;
+          }
+
+          function handleCookieConsent() { /* ... (same as previous page, including back-to-top adjustment) ... */
+              if (!getCookie('cookieConsent')) {
+                  if (cookieConsentBanner) {
+                      setTimeout(() => {
+                           cookieConsentBanner.classList.add('active');
+                           if(backToTopButton && backToTopButton.classList.contains('visible')) {
+                               backToTopButton.style.bottom = `${20 + cookieConsentBanner.offsetHeight}px`;
+                           }
+                      }, 500);
+                  }
+              } else {
+                   if (cookieConsentBanner) cookieConsentBanner.classList.remove('active');
+              }
+
+              if (cookieAcceptButton && cookieConsentBanner) {
+                  cookieAcceptButton.addEventListener('click', () => {
+                      setCookie('cookieConsent', 'accepted', 365);
+                      cookieConsentBanner.classList.remove('active');
+                       if(backToTopButton) {
+                          backToTopButton.style.bottom = '20px';
+                       }
+                  });
+              }
+          }
+
+          // --- Initialization ---
+          showLoading(); // Show loading initially
+          handleCookieConsent(); // Check and show cookie banner if needed (Added)
+
+          window.addEventListener('load', () => {
+               setTimeout(() => { hideLoading(); }, 100); // Adjust delay as needed
+               // Initial Feather Icons render is handled by applyTheme()
+          });
+          // Fallback: Hide loader if load event takes too long
+          setTimeout(()=> {
+              hideLoading();
+              // Ensure icons render even if load fails or takes too long
+              feather.replace(); // Call again just in case
+          }, 3000);
+
+          // Initial Feather Icons render is handled within the first call to applyTheme()
+
+      }); // End DOMContentLoaded
+  </script>
+</body>
+
+</html>
